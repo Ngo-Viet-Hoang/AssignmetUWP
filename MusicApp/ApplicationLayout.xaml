@@ -1,0 +1,30 @@
+﻿    <Page
+    x:Class="MusicApp.ApplicationLayout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <NavigationView x:Name="MusicApp" BackRequested="MusicApp_BackRequested" ItemInvoked="MusicApp_ItemInvoked">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Home" Icon="Home" Tag="home"/>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItem Content="Create A Song" Icon="Add" Tag="createSong"/>
+            <NavigationViewItem Content="List Song" Icon="Audio" Tag="listSong"/>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItem Content="Login" Icon="Permissions" Tag="login"/>
+            <NavigationViewItem Content="Register" Icon="Contact" Tag="register"/>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItem Content="Profile" Icon="ContactInfo" Tag="profile"/>
+        </NavigationView.MenuItems>
+        <NavigationView.AutoSuggestBox>
+            <AutoSuggestBox></AutoSuggestBox>
+        </NavigationView.AutoSuggestBox>
+        <ScrollViewer>
+            <Frame x:Name="ContentPage" Padding="10"/>
+        </ScrollViewer>
+    </NavigationView>
+</Page>
